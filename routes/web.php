@@ -19,14 +19,8 @@ Route::get('/', function () {
 });
 
 
-Route::get('/sample', function () {
-	return view('sample' ,[
-		"name" => "john"
-	]);
-	// return redirect('welcome');
-});
-
-
+Route::view('userview', 'user');
+Route::post('usercontroller', 'UsersController@account');
 
 // Route::view('sample' , 'sample');
 
