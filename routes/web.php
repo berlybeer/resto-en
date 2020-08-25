@@ -18,9 +18,11 @@ Route::get('/', function () {
 	// return redirect('welcome');
 });
 
+Route::get('formcontroller', 'FormsController@index');
+Route::view('form', 'form');
 
-Route::view('userview', 'user');
-Route::post('usercontroller', 'UsersController@account');
+// Route::view('userview', 'user');
+// Route::post('usercontroller', 'UsersController@account');
 
 // Route::view('sample' , 'sample');
 
