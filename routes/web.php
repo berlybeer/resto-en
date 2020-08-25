@@ -1,6 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Http;
+
+
+// $resp = Http::get('http://localhost:3000/restaurant');
+
+
+
 
 /*
 |--------------------------------------------------------------------------
@@ -18,11 +25,11 @@ Route::get('/', function () {
 	// return redirect('welcome');
 });
 
-Route::get('formcontroller', 'FormsController@index');
-Route::view('form', 'form');
+// Route::get('formcontroller', 'FormsController@index');
+// Route::view('form', 'form');
 
-// Route::view('userview', 'user');
-// Route::post('usercontroller', 'UsersController@account');
+Route::view('user', 'user');
+Route::post('usercontroller', 'UsersController@account');
 
 // Route::view('sample' , 'sample');
 

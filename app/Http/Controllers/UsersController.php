@@ -10,6 +10,10 @@ class UsersController extends Controller
 
     function account(Request $req)
     {
+    	$req->validate([
+    		'address'=>'required | min:3 | max:7',
+    		'email'=>'required | email'
+    	]);
     	return $req->input();
     }
 }
