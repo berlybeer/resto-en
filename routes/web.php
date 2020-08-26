@@ -28,8 +28,10 @@ Route::get('/', function () {
 	// return redirect('welcome');
 });
 
-Route::view('home','home');
-Route::view('profile', 'profile');
+Route::view('noaccess','noaccess');
+
+// Route::view('home','home');
+// Route::view('profile', 'profile');
 
 // Route::get('users', 'UsersController@index');
 
