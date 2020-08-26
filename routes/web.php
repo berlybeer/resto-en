@@ -28,7 +28,10 @@ Route::get('/', function () {
 	// return redirect('welcome');
 });
 
-Route::get('users', 'UsersController@index');
+Route::view('home','home');
+Route::view('profile', 'profile');
+
+// Route::get('users', 'UsersController@index');
 
 // Route::get('formcontroller', 'FormsController@index');
 // Route::view('form', 'form');
