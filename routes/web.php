@@ -28,7 +28,20 @@ Route::get('/', function () {
 	// return redirect('welcome');
 });
 
+Route::view('profile', 'profile')->middleware('customRouteAuth');
 Route::view('noaccess','noaccess');
+
+// Route::group(['middleware' => ['customAuth']], function(){
+// 	Route::get('/', function () {
+// 		return view('welcome');
+// 	// return redirect('welcome');
+// 	});
+
+// 	Route::view('profile', 'profile');
+// });
+
+
+
 
 // Route::view('home','home');
 // Route::view('profile', 'profile');

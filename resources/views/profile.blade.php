@@ -4,7 +4,7 @@
 
 @section('header')
 @parent
-<h2>profile header</h2>
+<h2>Users profile page</h2>
 @endsection
 
 @section('content')
