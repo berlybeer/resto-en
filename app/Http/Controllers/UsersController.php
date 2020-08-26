@@ -8,6 +8,12 @@ class UsersController extends Controller
 {
     //
 
+    function index()
+    {
+    	$d = ['name' => 'samm', 'email' => 'anil@test.com', 'address'=>'noida'];
+    	return view('users', ['data' => $d]);
+    }
+
     function account(Request $req)
     {
     	$req->validate([

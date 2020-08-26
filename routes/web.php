@@ -20,16 +20,21 @@ use Illuminate\Support\Facades\Http;
 |
 */
 
+
+
+
 Route::get('/', function () {
 	return view('welcome');
 	// return redirect('welcome');
 });
 
+Route::get('users', 'UsersController@index');
+
 // Route::get('formcontroller', 'FormsController@index');
 // Route::view('form', 'form');
 
-Route::view('user', 'user');
-Route::post('usercontroller', 'UsersController@account');
+// Route::view('user', 'user');
+// Route::post('usercontroller', 'UsersController@account');
 
 // Route::view('sample' , 'sample');
 
