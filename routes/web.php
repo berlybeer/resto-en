@@ -29,7 +29,7 @@ Route::get('/', function () {
 });
 
 Route::view('profile', 'profile')->middleware('customRouteAuth');
-Route::view('noaccess','noaccess');
+// Route::view('noaccess','noaccess');
 
 // Route::group(['middleware' => ['customAuth']], function(){
 // 	Route::get('/', function () {
@@ -40,7 +40,10 @@ Route::view('noaccess','noaccess');
 // 	Route::view('profile', 'profile');
 // });
 
+Route::view('noaccess', 'noaccess');
 
+Route::view('books', 'books');
+Route::post('books', 'Books@index');
 
 
 // Route::view('home','home');
