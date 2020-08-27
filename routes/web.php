@@ -40,6 +40,7 @@ Route::view('profile', 'profile')->middleware('customRouteAuth');
 // 	Route::view('profile', 'profile');
 // });
 
+Route::get('profiles', 'Profiles@list');
 Route::view('noaccess', 'noaccess');
 
 Route::view('books', 'books');
