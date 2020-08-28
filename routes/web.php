@@ -23,27 +23,31 @@ use Illuminate\Support\Facades\Http;
 
 
 
-Route::get('/', function () {
-	return view('welcome');
-	// return redirect('welcome');
-});
+
 
 Route::view('login','login');
 Route::post('login', 'Login@index');
-Route::view('loginprofile','loginprofile');
 
-Route::get('loginprofile/', function(){
-		if(!session()->has('data'))
-		{
-			return redirect('login');
-		}
-		return view('loginprofile');
-});
+
+// Route::get('loginprofile/', function(){
+		
+// 		return view('loginprofile');
+// });
 
 Route::get('/logout', function(){
 		session()->forget('data');
 		return redirect('login');
 });
+
+
+Route::group(['middleware' => ['customAuth']], function(){
+	Route::view('loginprofile','loginprofile');
+	Route::get('/', function () {
+	return view('welcome');
+	// return redirect('welcome');
+});
+});
+
 
 Route::view('profile', 'profile')->middleware('customRouteAuth');
 // Route::view('noaccess','noaccess');

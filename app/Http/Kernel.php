@@ -47,6 +47,10 @@ class Kernel extends HttpKernel
         // 'customAuth' =>[
         //     \App\Http\Middleware\CheckAge::class,
         // ] 
+        'customAuth' =>[
+            \App\Http\Middleware\customAuth::class,
+        ]
+
 
     ];
 
