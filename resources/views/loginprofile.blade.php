@@ -3,3 +3,5 @@
 
 <h3>{{session('data')['password']}}</h3>
 <a href="logout">Logout</a>
+
+<h3>{{print_r(session('data'))}}</h3>

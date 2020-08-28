@@ -22,7 +22,10 @@ use Illuminate\Support\Facades\Http;
 
 
 
-
+Route::get('/', function () {
+	return view('welcome');
+	// return redirect('welcome');
+});
 
 
 Route::view('login','login');
@@ -42,10 +45,7 @@ Route::get('/logout', function(){
 
 Route::group(['middleware' => ['customAuth']], function(){
 	Route::view('loginprofile','loginprofile');
-	Route::get('/', function () {
-	return view('welcome');
-	// return redirect('welcome');
-});
+
 });
 
 
@@ -67,6 +67,9 @@ Route::view('noaccess', 'noaccess');
 Route::view('books', 'books');
 Route::post('books', 'Books@index');
 
+Route::view('task','task');
+
+Route::post('task','Task@index');
 
 // Route::view('home','home');
 // Route::view('profile', 'profile');
