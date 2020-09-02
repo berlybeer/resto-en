@@ -15,20 +15,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 	return view('welcome');
-	// return redirect('welcome');
 });
 
-
-Route::get('/sample', function () {
-	return view('sample' ,[
-		"name" => "john"
-	]);
-	// return redirect('welcome');
-});
+Route::post('profile','Profile@store');
+Route::view('profile', 'profile');
 
 
-
-// Route::view('sample' , 'sample');
 
 
 
