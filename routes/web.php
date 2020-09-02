@@ -18,17 +18,14 @@ Route::get('/', function () {
 	// return redirect('welcome');
 });
 
-
-Route::get('/sample', function () {
-	return view('sample' ,[
-		"name" => "john"
-	]);
+Route::get('/profile/{lang}', function ($lang) {
+	App::setLocale($lang);
+	return view('profile');
 	// return redirect('welcome');
 });
 
+// Route::view('profile', 'profile');
 
-
-// Route::view('sample' , 'sample');
 
 
 
