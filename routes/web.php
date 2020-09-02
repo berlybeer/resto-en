@@ -14,23 +14,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-	return view('welcome');
-	// return redirect('welcome');
+    return view('welcome');
 });
-
-
-Route::get('/sample', function () {
-	return view('sample' ,[
-		"name" => "john"
-	]);
-	// return redirect('welcome');
-});
-
-
-
-// Route::view('sample' , 'sample');
-
-
-
-
-
