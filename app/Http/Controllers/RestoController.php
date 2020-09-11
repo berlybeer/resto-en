@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use App\Restaurant;
+use App\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 use Session;
 
 class RestoController extends Controller
@@ -64,7 +66,14 @@ class RestoController extends Controller
 
     function register(Request $req)
     {
-        return $req->input();
+        $user = new User;
+        $user->name = $req->input('name');
+        $user->email = $req->input('email');
+        $user->password = Crypt::encrypt($req->input('password'));
+        $user->contact = $req->input('contact');
+        $user->save();
+        $req->session()->put('user', $req->input('name'));
+        return redirect('/');
     }
 }
 

@@ -21,7 +21,7 @@
 	  </div>
 	    <div class="form-group">
 	    <label>Contact</label>
-	    <input type="text" name="contact" class="form-control" placeholcer="Enter contact number">	 
+	    <input type="text" name="contact" class="form-control" placeholder="Enter contact number">	 
 	  </div>
 
 	 
