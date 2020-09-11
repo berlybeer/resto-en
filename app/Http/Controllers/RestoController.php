@@ -61,5 +61,10 @@ class RestoController extends Controller
         return redirect('list');
 
     }
+
+    function register(Request $req)
+    {
+        return $req->input();
+    }
 }
 
