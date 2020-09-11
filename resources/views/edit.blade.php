@@ -4,9 +4,11 @@
 
 <div class="col-sm-6">
 	<h1>Edit Restaurant</h1>
-	<form method="post" action="">
+	<form method="post" action="/edit">
 		@csrf
 	  <div class="form-group">
+	  	<input type="hidden" name="id" value="{{$data->id}}">
+
 	    <label>Name</label>
 	    <input type="text" name="name" class="form-control" value="{{$data->name}}">	 
 	  </div>

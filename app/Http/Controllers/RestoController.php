@@ -48,5 +48,18 @@ class RestoController extends Controller
         $data = Restaurant::find($id);
         return view('edit', ['data' => $data]);
     }
+
+    function update(Request $req)
+    {
+
+        $resto = Restaurant::find($req->id);
+        $resto->name=$req->input('name');
+        $resto->email=$req->input('email');
+        $resto->address=$req->input('address');
+        $resto->save();
+        $req->session()->flash('status', 'Restaurand updated successtully');
+        return redirect('list');
+
+    }
 }
 
