@@ -22,7 +22,16 @@ class RestoController extends Controller
 
     function add(Request $req)
     {
-        return $req->input();
+        // return $req->input();
+
+        $resto = new Restaurant;
+        $resto->name= $req->input('name');
+        $resto->email= $req->input('email');
+        $resto->address= $req->input('address');
+        $resto->save();
+
+        $req->session()->flash('status', 'Restaurant entered Successfully');
+        return redirect('list');
     }
 }
 

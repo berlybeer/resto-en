@@ -25,7 +25,7 @@
 		        <a class="nav-link" href="#">Search</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="#">Add</a>
+		        <a class="nav-link" href="/add">Add</a>
 		      </li>
 		      <li class="nav-item">
 		        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Login</a>
