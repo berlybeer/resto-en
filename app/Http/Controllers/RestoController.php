@@ -87,5 +87,10 @@ class RestoController extends Controller
         }
 
     }
+
+    function logout(){
+        Session::flush();
+        return redirect('');
+    }
 }
 

@@ -28,13 +28,20 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="/add">Add</a>
 		      </li>
-		      <li class="nav-item">
+		 
+
+		    @if(!Session::get('user'))
+		     <li class="nav-item">
 		        <a class="nav-link" href="/login" tabindex="-1" aria-disabled="true">Login</a>
 		      </li>
 		        <li class="nav-item">
 		        <a class="nav-link" href="/register" tabindex="-1" aria-disabled="true">Register</a>
 		      </li>
+		    @endif  
 		    @if(Session::get('user'))
+		    <li class="nav-item">
+		        <a class="nav-link" href="/logout" tabindex="-1" aria-disabled="true">Logout</a>
+		      </li>
 		    <li class="nav-item">
 		        <a class="nav-link" href="" tabindex="-1" aria-disabled="true">Welcome | {{Session::get('user')}}</a>
 		      </li>
