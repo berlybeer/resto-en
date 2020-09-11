@@ -75,5 +75,17 @@ class RestoController extends Controller
         $req->session()->put('user', $req->input('name'));
         return redirect('/');
     }
+
+
+    function login(Request $req)
+    {
+        $user = User::where('email', $req->input('email'))->get();
+        if(Crypt::decrypt($user[0]->password) == $req->input('password'))
+        {
+            $req->session()->put('user', $user[0]->name);
+            return redirect('');
+        }
+
+    }
 }
 
