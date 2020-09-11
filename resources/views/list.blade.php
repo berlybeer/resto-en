@@ -15,9 +15,10 @@
   <thead>
     <tr>
       <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Address</th>
+      <th>Operation</th>
     </tr>
   </thead>
   <tbody>
@@ -27,6 +28,7 @@
       <td>{{$item->name}}</td>
       <td>{{$item->email}}</td>
       <td>{{$item->address}}</td>
+      <td><a href="/delete/{{$item->id}}"><i class="fa fa-trash"></i></a></td>
     </tr>
 	@endforeach
   </tbody>
