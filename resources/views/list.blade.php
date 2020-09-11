@@ -19,6 +19,7 @@
       <th scope="col">Email</th>
       <th scope="col">Address</th>
       <th>Operation</th>
+
     </tr>
   </thead>
   <tbody>
@@ -28,7 +29,11 @@
       <td>{{$item->name}}</td>
       <td>{{$item->email}}</td>
       <td>{{$item->address}}</td>
-      <td><a href="/delete/{{$item->id}}"><i class="fa fa-trash"></i></a></td>
+      <td>
+      	<a href="/delete/{{$item->id}}"><i class="fa fa-trash"></i></a>
+      	<a href="/edit/{{$item->id}}"><i class="fa fa-edit"></i></a>
+
+      </td>
     </tr>
 	@endforeach
   </tbody>
